@@ -62,3 +62,47 @@ h2{
 h3{
     font-size: 2.4rem;
 }
+
+/* Header */
+
+.header{
+    display: flex;
+    /* To centralize horizontally */
+    justify-content: center;
+}
+
+.header__logo{
+    /* Remember, the margin up and down is the first value and the margin to the left and right is the second value. */
+    margin: 3rem 0;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.footer__text{
+    font-family: var(--mainFont);
+    text-align: center;
+    font-size: 2.2rem;
+}
+/* nav */
+
+.nav{
+background-color: var(--darkPrimary);
+/* Remember, the padding up and down is the first value and the padding to the left and right is the second value. */
+padding: 1rem 0;
+display: flex;
+justify-content: center;
+gap: 2rem;
+}
+
+.nav_link{
+font-family: var(--mainFont);
+color: var(--white);
+font-size: 3rem;
+}
+.nav_link--active, .nav_link:hover{
+    color: var(--secondary);
+}
