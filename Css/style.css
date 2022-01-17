@@ -95,13 +95,19 @@ background-color: var(--darkPrimary);
 padding: 1rem 0;
 display: flex;
 justify-content: center;
-gap: 2rem;
+/* new way of separation */
+/* gap: 2rem; */
+
 }
 
 .nav_link{
 font-family: var(--mainFont);
 color: var(--white);
 font-size: 3rem;
+margin-right: 2rem;
+}
+.nav_link:first:last-of-type{
+    margin-right: 0;
 }
 .nav_link--active, .nav_link:hover{
     color: var(--secondary);
