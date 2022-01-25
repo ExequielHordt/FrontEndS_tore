@@ -183,3 +183,34 @@ background-image: url(../img/grafico1.jpg);
         }
 }
 
+/* About */
+.about{
+display: grid;
+gap: 2rem;
+}
+
+.about__image{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+}
+
+.about__text{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+
+@media (min-width: 768px) {
+    .about{
+        display: grid;
+        }
+    .about__image{
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+    
+    .about__text{
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+}
