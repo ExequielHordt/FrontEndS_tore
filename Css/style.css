@@ -1,8 +1,8 @@
-:root{
+:root {
     --primary: #9c27b0;
     --darkPrimary: #89119d;
     --secondary: #ffce00;
-    --darkSecondary: rgb(233,287,2);
+    --darkSecondary: rgb(233, 287, 2);
     --white: #fff;
     --black: #000;
     --mainFont: 'Staatliches', cursive;
@@ -10,147 +10,151 @@
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box;
-  font-size: 62.5%;
+    box-sizing: border-box;
+    font-size: 62.5%;
 }
+
 *, *:before, *:after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 /* Global */
 
-body{
-background-color: var(--primary);
-font-size: 1.6rem;
-/* source base */
-line-height: 1.5;
+body {
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    /* source base */
+    line-height: 1.5;
 }
 
-p{
+p {
     font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--white);
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-.container{
+.container {
     max-width: 120rem;
     /* to center */
     margin: 0 auto;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     text-align: center;
     color: var(--secondary);
     font-family: var();
 }
 
-h1{
+h1 {
     font-size: 4rem;
 }
 
-h2{
+h2 {
     font-size: 3.2rem;
 }
 
-h3{
+h3 {
     font-size: 2.4rem;
 }
 
 /* Header */
 
-.header{
+.header {
     display: flex;
     /* To centralize horizontally */
     justify-content: center;
 }
 
-.header__logo{
+.header__logo {
     /* Remember, the margin up and down is the first value and the margin to the left and right is the second value. */
     margin: 3rem 0;
 }
 
 /* Footer */
-.footer{
+.footer {
     background-color: var(--darkPrimary);
     padding: 1rem 0;
     margin-top: 2rem;
 }
-.footer__text{
+
+.footer__text {
     font-family: var(--mainFont);
     text-align: center;
     font-size: 2.2rem;
 }
+
 /* nav */
 
-.nav{
-background-color: var(--darkPrimary);
-/* Remember, the padding up and down is the first value and the padding to the left and right is the second value. */
-padding: 1rem 0;
-display: flex;
-justify-content: center;
-/* new way of separation */
-/* gap: 2rem; */
+.nav {
+    background-color: var(--darkPrimary);
+    /* Remember, the padding up and down is the first value and the padding to the left and right is the second value. */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    /* new way of separation */
+    /* gap: 2rem; */
 
 }
 
-.nav_link{
-font-family: var(--mainFont);
-color: var(--white);
-font-size: 3rem;
-margin-right: 2rem;
+.nav_link {
+    font-family: var(--mainFont);
+    color: var(--white);
+    font-size: 3rem;
+    margin-right: 2rem;
 }
-.nav_link:first:last-of-type{
+
+.nav_link:first:last-of-type {
     margin-right: 0;
 }
-.nav_link--active, .nav_link:hover{
+
+.nav_link--active, .nav_link:hover {
     color: var(--secondary);
 }
+
 /* Grid */
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .grid{
+    .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 /* Product */
 
-.product{
-background-color: var(--darkPrimary);
-padding: 1rem;
+.product {
+    background-color: var(--darkPrimary);
+    padding: 1rem;
 }
 
-.product__img{
-width: 100%;
+.product__img {
+    width: 100%;
 }
 
-.product__info{
+.product__info {}
 
-}
-
-.product__name{
+.product__name {
     font-size: 4rem;
 }
 
-.product__price{
+.product__price {
     font-size: 2.8rem;
     color: var(--secondary);
 }
 
-.product__name, .product__price{
+.product__name, .product__price {
     font-family: var(--mainFont);
     margin: 1rem 0;
     text-align: center;
@@ -166,51 +170,78 @@ width: 100%;
     grid-column: 1 / 3;
 }
 
-.graphic--shirt{
-grid-row: 2 / 3;
-background-image: url(../img/grafico1.jpg);
+.graphic--shirt {
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
 }
 
-.graphic--node{
+.graphic--node {
     background-image: url(../img/grafico2.jpg);
     grid-row: 8 / 9;
 }
 
 @media (min-width: 768px) {
-    .graphic--node{
+    .graphic--node {
         grid-row: 5 / 6;
         grid-column: 2 / 4;
-        }
+    }
 }
 
 /* About */
-.about{
-display: grid;
-gap: 2rem;
+.about {
+    display: grid;
+    gap: 2rem;
 }
 
-.about__image{
+.about__image {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+    width: 100%;
 }
 
-.about__text{
+.about__text {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
 }
 
 
 @media (min-width: 768px) {
-    .about{
+    .about {
         display: grid;
-        }
-    .about__image{
+    }
+
+    .about__image {
         grid-row: 1 / 2;
         grid-column: 2 / 3;
     }
-    
-    .about__text{
+
+    .about__text {
         grid-row: 1 / 2;
         grid-column: 1 / 2;
     }
+}
+
+/* Blocks */
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .blocks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.block {
+    text-align: center;
+}
+
+.block__tittle {
+    margin: 0;
+}
+
+.block__image {
+    width: 100%;
 }
